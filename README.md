@@ -22,7 +22,7 @@ mkdir gulu
 cd gulu
 touch README.md
 vim README.md //轱辘 - 一个 Vue UI 组件
-              //作者： me
+              //作者： wo
 ```
 本地初始化git
 ```
