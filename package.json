@@ -4,7 +4,9 @@
   "description": "这是一个关于vue的iu框架",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.htnml"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,17 @@
   },
   "homepage": "https://github.com/hlr423/gulu#readme",
   "dependencies": {
-    "vue": "^2.2.6"
+    "git-open": "^3.0.0",
+    "vue": "^2.7.14",
+    "vue-hot-reload-api": "^2.3.0"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.3.0",
+    "less": "^4.1.3",
+    "parcel-bundler": "^1.9.2",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
   }
 }
