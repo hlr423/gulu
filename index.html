@@ -16,24 +16,34 @@
             font-size: var(--font-size);
         }
         :root{
-            --button-height:32px;
-            --font-size:14px;
+            --button-height:42px;
+            --font-size:24px;
             --button-bg:white;
             --button-active-bg: #87c9cb;
-            --border-radius:4px;
+            --border-radius:6px;
             --color:#87c9cb;
             --color-hover:#666;
             --border-color: #87c9cb;
             --border-color-hover:#666;
         }
     </style>
+    <style>
+        .icon{
+            width: 1em;
+            height: 1em;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
-    <h-button></h-button>
+    <h-button icon="sousuo">搜索</h-button>
+    <h-button icon="chongzhi" icon-position="right">充值</h-button>
+    <h-button icon="jijinzhuanhuan" icon-position="right">基金转换</h-button>
+    <h-button icon="shezhi" icon-position="right">设置</h-button>
+    <h-button icon="">提交</h-button>
 </div>
-<!--<script src="./node_modules/vue/dist/vue.min.js"></script>-->
 <script src="src/app.js"></script>
+<script type="module" src="//at.alicdn.com/t/c/font_3866991_5qbyh97yxgk.js"></script>
 
 </body>
 </html>

@@ -181,6 +181,46 @@ Unknown command: "parcel"
   }
 ```
 成功～～～～～～～～～！！！
+#
+### 添加iconfont到框架里
+- 添加心仪到图标到购物车
+- 将购物车到图标添加到项目
+- Unicode 、Font class 、Symbol
+- 生成图标文件链接
+- 到本地项目中引入
 
+### 框架中使用iconfont图标
+```yaml
+<h-button icon="jijinzhuanhuan" icon-position="right">基金转换</h-button>
+<h-button icon="shezhi" icon-position="right">设置</h-button>
+<h-button icon="">提交</h-button>
+```
+使用css 交换元素位置
 
-### 作者：wo
+```less
+   .icon-right{
+      >.icon{order: 2;margin-left: 5px;margin-right: 0}
+      >.content{order: 1;}
+      }
+```
+```yaml
+<button class="h-button" :class="{[`icon-${iconPosition}`]:true}">
+<svg class="icon" v-if="icon">
+    <use :xlink:href="`#h-${icon}`"></use>
+</svg>
+<div class="content">
+    <slot></slot>
+</div>
+
+</button>
+```
+`:class="{[`icon-${iconPosition}`]:true}"`动态绑定class
+ 
+ ![button logo](src/assate/WechatIMG19193.png)
+ 
+ ![button logo](src/assate/WechatIMG19194.png)
+ 
+ ![button logo](src/assate/WechatIMG19195.png)
+
+### 入门的button轱辘构建成功～～～～～～
+#### 作者：wo
