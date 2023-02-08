@@ -16,15 +16,15 @@
             font-size: var(--font-size);
         }
         :root{
-            --button-height:42px;
-            --font-size:24px;
+            --button-height:32px;
+            --font-size:1em;
             --button-bg:white;
-            --button-active-bg: #87c9cb;
+            --button-active-bg: #e30076;
             --border-radius:6px;
-            --color:#87c9cb;
+            --color:#e30076;
             --color-hover:#666;
-            --border-color: #87c9cb;
-            --border-color-hover:#666;
+            --border-color: #666;
+            --border-color-hover:#e30076;
         }
     </style>
     <style>
@@ -36,14 +36,15 @@
 </head>
 <body>
 <div id="app">
-    <h-button icon="sousuo">搜索</h-button>
+    <p>{{loading1}}</p>
+    <h-button icon="sousuo" :loading="loading1" @click="loading1=!loading1">搜索</h-button>
     <h-button icon="chongzhi" icon-position="right">充值</h-button>
-    <h-button icon="jijinzhuanhuan" icon-position="right">基金转换</h-button>
+    <h-button icon="jijinzhuanhuan" icon-position="right" >基金转换</h-button>
     <h-button icon="shezhi" icon-position="right">设置</h-button>
     <h-button icon="">提交</h-button>
 </div>
 <script src="src/app.js"></script>
-<script type="module" src="//at.alicdn.com/t/c/font_3866991_5qbyh97yxgk.js"></script>
+<script type="module" src="//at.alicdn.com/t/c/font_3866991_h3mwe0iest.js"></script>
 
 </body>
 </html>

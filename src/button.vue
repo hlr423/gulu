@@ -7,10 +7,9 @@
 -->
 
 <template>
-    <button class="h-button" :class="{[`icon-${iconPosition}`]:true}">
-        <svg class="icon" v-if="icon">
-            <use :xlink:href="`#h-${icon}`"></use>
-        </svg>
+    <button id="h-button" class="h-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
+        <h-icon v-if="icon && !loading" class="icon"  :name="icon"></h-icon>
+        <h-icon  v-if="loading" class="icon loading"  name="loading"></h-icon>
         <div class="content">
             <slot></slot>
         </div>
@@ -19,13 +18,44 @@
 </template>
 
 <script>
+
     export default {
         name:'h-button',
-        props:['icon','iconPosition']
+        // props:['icon','iconPosition'],
+        props:{
+            icon:{},
+            loading:{
+                type:Boolean,
+                default: false
+            },
+            disable:{
+                type:Boolean,
+                default: false
+            },
+            iconPosition:{
+                type: String,
+                default:'left',
+                validator(value){
+                    return !(value !== 'left' && value !== 'right');
+                }
+
+            }
+        },
+        watch:{
+            loading(va){
+                console.log(va,this.loading)
+                document.getElementById('h-button').disabled=this.loading
+
+            }
+        }
     }
 </script>
 
 <style  lang="less">
+    @keyframes loadSpin {
+        0% {transform: rotate(0deg)}
+        100%{transform: rotate(360deg)}
+    }
     .h-button{
         height: var(--button-height);
         font-size: var(--font-size);
@@ -50,6 +80,11 @@
             >.icon{order: 2;margin-left: 5px;margin-right: 0}
             >.content{order: 1;}
         }
+        .loading{
+            fill: #87c9cb;
+            animation: loadSpin 1s infinite linear;
+        }
     }
+
 
 </style>
