@@ -18,10 +18,9 @@
 </template>
 
 <script>
-
+import Icon from "./icon"
     export default {
         name:'h-button',
-        // props:['icon','iconPosition'],
         props:{
             icon:{},
             loading:{
@@ -40,6 +39,9 @@
                 }
 
             }
+        },
+        components:{
+            "h-icon":Icon
         },
         watch:{
             loading(va){
