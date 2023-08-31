@@ -37,16 +37,23 @@
 <body>
 <div id="app">
     <p>{{loading1}}</p>
+    <!--    按钮组-->
+    <h-button-group>
+        <h-button icon="zuo">上一页</h-button>
+        <h-button icon="you" icon-position="right">下一页</h-button>
+    </h-button-group>
+    <!--    按钮-->
     <h-button icon="sousuo" icon-position="right">提交</h-button>
     <h-button icon="sousuo" :loading="loading1" @click="loading1=!loading1">搜索</h-button>
     <h-button icon="chongzhi" icon-position="right">充值</h-button>
     <h-button icon="jijinzhuanhuan" icon-position="right" >基金转换</h-button>
     <h-button icon="shezhi" icon-position="right">设置</h-button>
     <h-button icon="">提交</h-button>
+
     <use id="test"></use>
 </div>
 <script src="src/app.js"></script>
-<script type="module" src="//at.alicdn.com/t/c/font_3866991_h3mwe0iest.js"></script>
+<script type="module" src="//at.alicdn.com/t/c/font_3866991_h9hq30m0hcr.js"></script>
 
 </body>
 </html>

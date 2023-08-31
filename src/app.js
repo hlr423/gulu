@@ -8,10 +8,12 @@
 
 import Vue from "vue"
 import Button from "./button.vue"
+import ButtonGroup from "./button-group.vue"
 import Icon from "./icon.vue"
 import chai from 'chai'
 import spies from 'chai-spies'
 Vue.component('h-button',Button)
+Vue.component('h-button-group',ButtonGroup)
 Vue.component('h-icon',Icon)
 chai.use(spies)
 new Vue({
@@ -35,7 +37,6 @@ try{
         })
         vm.$mount()
         let useElement=vm.$el.querySelector('use')
-        console.log(useElement)
         let href=useElement.getAttribute('xlink:href')
         expect(href).to.equal('#h-shezhi')
         vm.$el.remove()
@@ -52,7 +53,6 @@ try{
         })
         vm.$mount()
         let useElement=vm.$el.querySelector('use')
-        console.log(useElement)
         let href=useElement.getAttribute('xlink:href')
         expect(href).to.equal('#h-loading')
         vm.$el.remove()
@@ -69,7 +69,6 @@ try{
         })
         vm.$mount(div)
         let svg=vm.$el.querySelector('svg')
-        console.log(svg)
         let order=window.getComputedStyle(svg).order
         expect(order).to.equal('1')
         vm.$el.remove()
