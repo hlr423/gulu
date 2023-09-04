@@ -1,6 +1,14 @@
 # 轮子 - 一个Vue UI组件
 [![Build Status](https://app.travis-ci.com/hlr423/gulu.svg?branch=hlr)](https://app.travis-ci.com/hlr423/gulu)
 
+
+图例
+![button logo](src/assate/WechatIMG19193.png)
+ 
+![button logo](src/assate/WechatIMG19194.png)
+ 
+![button logo](src/assate/WechatIMG19195.png)
+ 
 ## 介绍
    这是一个在学习Vue的过程中做的一个UI框架，希望对你有用。
    
