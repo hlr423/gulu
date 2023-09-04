@@ -15,6 +15,7 @@ import spies from 'chai-spies'
 Vue.component('h-button',Button)
 Vue.component('h-button-group',ButtonGroup)
 Vue.component('h-icon',Icon)
+// import './svg'
 chai.use(spies)
 new Vue({
     el: "#app",
