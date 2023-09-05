@@ -1,8 +1,8 @@
 # 轮子 - 一个Vue UI组件
 [![Build Status](https://app.travis-ci.com/hlr423/gulu.svg?branch=hlr)](https://app.travis-ci.com/hlr423/gulu)
+--
 
 
-图例
 ![button logo](src/assate/WechatIMG19193.png)
  
 ![button logo](src/assate/WechatIMG19194.png)
@@ -38,7 +38,6 @@ IE 8 及以上浏览器都支持此样式
 ```
   IE 15 及以上浏览器都支持此样式
 
-`` 
 
 2.安装 hg-view
 ```

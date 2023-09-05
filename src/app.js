@@ -10,11 +10,13 @@ import Vue from "vue"
 import Button from "./button.vue"
 import ButtonGroup from "./button-group.vue"
 import Icon from "./icon.vue"
+import Input from "./Input.vue"
 import chai from 'chai'
 import spies from 'chai-spies'
 Vue.component('h-button',Button)
 Vue.component('h-button-group',ButtonGroup)
 Vue.component('h-icon',Icon)
+Vue.component('h-input',Input)
 // import './svg'
 chai.use(spies)
 new Vue({

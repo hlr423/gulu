@@ -18,6 +18,7 @@
         :root{
             --button-height:32px;
             --font-size:1em;
+            /*--button-bg:linear-gradient(to right, #20e5f5, #7bb2f1);*/
             --button-bg:white;
             --button-active-bg: #e30076;
             --border-radius:6px;
@@ -28,15 +29,23 @@
         }
     </style>
     <style>
-        .icon{
-            width: 1em;
-            height: 1em;
+        .margin{
+           padding: 1rem 0;
         }
     </style>
 </head>
 <body>
 <div id="app">
-    <p>{{loading1}}</p>
+    <p class="icon">{{loading1}}</p>
+    <div class="margin">
+        <h-input value="高人" disabled></h-input>
+        <h-input value="小高人" readonly></h-input>
+        <h-input value="小黄人"></h-input>
+        <div class="margin">
+            <h-input value="大" error="姓名不能少于2个字"></h-input>
+        </div>
+    </div>
+
     <!--    按钮组-->
     <h-button-group>
         <h-button icon="zuo">上一页</h-button>
@@ -52,7 +61,7 @@
     <use id="test"></use>
 </div>
 <script src="src/app.js"></script>
-<script type="module" src="//at.alicdn.com/t/c/font_3866991_h9hq30m0hcr.js"></script>
+<script type="module" src="//at.alicdn.com/t/c/font_3866991_lrw9y9qo4e.js"></script>
 
 </body>
 </html>
