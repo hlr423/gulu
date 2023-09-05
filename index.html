@@ -38,11 +38,13 @@
 <div id="app">
     <p class="icon">{{loading1}}</p>
     <div class="margin">
-        <h-input value="高人" disabled></h-input>
+        <h-input v-model="message" disabled></h-input>
         <h-input value="小高人" readonly></h-input>
-        <h-input value="小黄人"></h-input>
+        <h-input value="小黄人" @change="inputChange"></h-input>
         <div class="margin">
-            <h-input value="大" error="姓名不能少于2个字"></h-input>
+            <h-input v-model="message" error="姓名不能少于2个字"></h-input>
+            <p class="margin">{{message}}</p>
+            <h-button icon="chongzhi" @click="message+=1">添加</h-button>
         </div>
     </div>
 
