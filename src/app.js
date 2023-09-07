@@ -23,7 +23,7 @@ new Vue({
     el: "#app",
     data:{
         loading1:false,
-        message:'hi'
+        message:''
     },
     created(){
         setTimeout( ()=> {

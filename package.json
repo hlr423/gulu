@@ -1,6 +1,6 @@
 {
   "name": "hg-view",
-  "version": "0.0.5-2",
+  "version": "0.0.6",
   "description": "这是一个关于vue的iu框架",
   "main": "dist/index.js",
   "scripts": {

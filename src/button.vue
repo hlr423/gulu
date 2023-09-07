@@ -7,7 +7,9 @@
 -->
 
 <template>
-    <button id="h-button" class="h-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
+    <button id="h-button" class="h-button"
+            :class="{[`icon-${iconPosition}`]:true}"
+            @click="$emit('click')">
         <h-icon v-if="icon && !loading" class="icon"  :name="icon"></h-icon>
         <h-icon  v-if="loading" class="icon loading"  name="loading"></h-icon>
         <div class="content">
@@ -38,7 +40,7 @@ import Icon from "./icon"
                     return !(value !== 'left' && value !== 'right');
                 }
 
-            }
+            },
         },
         components:{
             "h-icon":Icon
@@ -53,7 +55,7 @@ import Icon from "./icon"
     }
 </script>
 
-<style  lang="less">
+<style  lang="scss">
     @keyframes loadSpin {
         0% {transform: rotate(0deg)}
         100%{transform: rotate(360deg)}
@@ -61,7 +63,7 @@ import Icon from "./icon"
     .h-button{
         height: var(--button-height);
         font-size: var(--font-size);
-        padding: 0 0.5em;
+        padding: 0.4em 1em;
         border-radius: var(--border-radius);
         border: 1px solid var(--border-color);
         background: var(--button-bg);
@@ -70,9 +72,61 @@ import Icon from "./icon"
         display:inline-flex;
         justify-content: center;
         align-items: center;
+        &[circle]{
+            border-radius: var(--button-height);
+        }
+        &[info]{
+            background: var(--button-bg-s-info);
+            color: var(--color-two);
+            border: 1px solid var(--border-color-two);
+        }
+        &[success]{
+            background: var(--button-bg-s-success);
+            color: var(--color-two);
+            border: 1px solid var(--border-color-two);
+        }
+        &[warning]{
+            background: var(--button-bg-s-warning);
+            color: var(--color-two);
+            border: 1px solid var(--border-color-two);
+        }
+        &[error]{
+            background: var(--button-bg-s-error);
+            color: var(--color-two);
+            border: 1px solid var(--border-color-two);
+        }
+        &[grad]{
+            border: 1px solid var(--border-color-two);
+            color: var(--color-two);
+            &[info]{
+                background: var(--button-bg-info);
+            }
+            &[success]{
+                background: var(--button-bg-success);
+            }
+            &[warning]{
+                background: var(--button-bg-warning);
+            }
+            &[error]{
+                background: var(--button-bg-error);
+            }
+        }
+
         &:hover{
             border-color: var(--border-color-hover);
             color: var(--color-hover);
+        }
+        &[grad]:hover{
+            border-color: var(--border-color-hover-two);
+            box-shadow:inset 0 1px 3px var(--border-color-hover-two);
+            color: var(--color-hover-two);
+        }
+        &[info],&[success],&[warning],&[error]{
+            &:hover{
+                border-color: var(--border-color-hover-two);
+                box-shadow:inset 0 0.5px 3px var(--border-color-hover-two);
+                color: var(--color-hover-two);
+            }
         }
         &:active{background-color: var(--button-active-bg);color: var(--button-bg);}
         &:focus{outline: none;}

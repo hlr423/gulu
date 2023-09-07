@@ -16,50 +16,121 @@
             font-size: var(--font-size);
         }
         :root{
+            /*纯色,渐变*/
             --button-height:32px;
             --font-size:1em;
-            /*--button-bg:linear-gradient(to right, #20e5f5, #7bb2f1);*/
             --button-bg:white;
-            --button-active-bg: #e30076;
-            --border-radius:6px;
+            --button-bg-s-success:#19be6b;
+            --button-bg-s-info:#6772FF;
+            --button-bg-s-warning:#f5720d;
+            --button-bg-s-error:#F87176;
+            --border-color: #666;
             --color:#e30076;
             --color-hover:#666;
             --border-color: #666;
             --border-color-hover:#e30076;
+
+            --button-bg-success:linear-gradient(to right, #39AC4C,#22BFE4);
+            --button-bg-info:linear-gradient(to right, #6772FF 0,#00F9E5);
+            --button-bg-warning:linear-gradient(to right, #f5720d, #CDDC30);
+            --button-bg-error:linear-gradient(to right, #D40E00,#F87176);
+            --border-image:linear-gradient(to right, #20e5f5, #7bb2f1) 1;
+            --button-active-bg: #e30076;
+            --border-radius:6px;
+            --color-two:#fff;
+            --color-hover-two:#fff;
+            --border-color-two: #fff;
+            --border-color-hover-two:#ddd;
         }
     </style>
     <style>
         .margin{
-           padding: 1rem 0;
+           padding: .5rem 0;
         }
     </style>
 </head>
 <body>
 <div id="app">
-    <p class="icon">{{loading1}}</p>
-    <div class="margin">
-        <h-input v-model="message" disabled></h-input>
-        <h-input value="小高人" readonly></h-input>
-        <h-input value="小黄人" @change="inputChange"></h-input>
+    <div class="margin" style="width: 50%;">
+        <h-input value="职能" disabled class="margin"></h-input>
+        <h-input value="" readonly class="margin" placeholder="姓名"></h-input>
+        <h-input value="" @change="inputChange" placeholder="性别" class="margin"></h-input>
+        <h-input v-model="message" error="联系方式不能为空" placeholder="联系方式" class="margin"></h-input>
+
         <div class="margin">
-            <h-input v-model="message" error="姓名不能少于2个字"></h-input>
-            <p class="margin">{{message}}</p>
-            <h-button icon="chongzhi" @click="message+=1">添加</h-button>
+<!--            <h-button icon="chongzhi" @click="message+=1" >添加</h-button>-->
         </div>
     </div>
-
-    <!--    按钮组-->
-    <h-button-group>
-        <h-button icon="zuo">上一页</h-button>
-        <h-button icon="you" icon-position="right">下一页</h-button>
-    </h-button-group>
     <!--    按钮-->
-    <h-button icon="sousuo" icon-position="right">提交</h-button>
-    <h-button icon="sousuo" :loading="loading1" @click="loading1=!loading1">搜索</h-button>
-    <h-button icon="chongzhi" icon-position="right">充值</h-button>
-    <h-button icon="jijinzhuanhuan" icon-position="right" >基金转换</h-button>
-    <h-button icon="shezhi" icon-position="right">设置</h-button>
-    <h-button icon="">提交</h-button>
+    <div class="margin">
+        <h-button circle icon="sousuo" info grad></h-button>
+        <h-button icon-position="right" info grad>info</h-button>
+        <h-button :loading="loading1" @click="loading1=!loading1" success grad>success</h-button>
+        <h-button icon-position="right" error grad>error</h-button>
+        <h-button icon-position="right" warning grad>warning</h-button>
+    </div>
+    <div class="margin">
+        <h-button circle icon="sousuo" info></h-button>
+        <h-button icon-position="right" error>error</h-button>
+        <h-button icon="" success>success</h-button>
+        <h-button icon="" info>info</h-button>
+        <h-button icon="" warning>warning</h-button>
+    </div>
+    <!--    按钮组-->
+    <div class="margin">
+        <h-button-group>
+            <h-button icon="zuo" info grad>上一页</h-button>
+            <h-button icon="you" icon-position="right" info grad>下一页</h-button>
+        </h-button-group>
+        <h-button-group>
+            <h-button icon="zuo" error grad>上一页</h-button>
+            <h-button icon="you" icon-position="right" error grad>下一页</h-button>
+        </h-button-group>
+        <h-button-group>
+            <h-button icon="zuo" warning grad>上一页</h-button>
+            <h-button icon="you" icon-position="right" warning grad>下一页</h-button>
+        </h-button-group>
+        <h-button-group>
+            <h-button icon="zuo" success grad>上一页</h-button>
+            <h-button icon="you" icon-position="right" success grad>下一页</h-button>
+        </h-button-group>
+    </div>
+    <div class="margin">
+        <h-button-group>
+            <h-button icon="zuo" error>上一页</h-button>
+            <h-button icon="you" icon-position="right" error>下一页</h-button>
+        </h-button-group>
+        <h-button-group>
+            <h-button icon="zuo" warning>上一页</h-button>
+            <h-button icon="you" icon-position="right" warning>下一页</h-button>
+        </h-button-group>
+        <h-button-group>
+            <h-button icon="zuo" info>上一页</h-button>
+            <h-button icon="you" icon-position="right" info>下一页</h-button>
+        </h-button-group>
+        <h-button-group>
+            <h-button icon="zuo" success>上一页</h-button>
+            <h-button icon="you" icon-position="right" success>下一页</h-button>
+        </h-button-group>
+    </div>
+    <!--    按钮线框-->
+    <div class="margin">
+        <h-button circle icon="sousuo"></h-button>
+        <h-button-group>
+            <h-button icon="zuo">上一页</h-button>
+            <h-button icon="you" icon-position="right">下一页</h-button>
+        </h-button-group>
+        <h-button-group>
+            <h-button icon="zuo">上一页</h-button>
+            <h-button>更多</h-button>
+            <h-button icon="you" icon-position="right">下一页</h-button>
+        </h-button-group>
+        <h-button icon-position="right" >提交</h-button>
+        <h-button icon="sousuo" :loading="loading1" @click="loading1=!loading1" >搜索</h-button>
+        <h-button icon="chongzhi" icon-position="right">充值</h-button>
+        <h-button icon="jijinzhuanhuan" icon-position="right">基金转换</h-button>
+    </div>
+
     <use id="test"></use>
 </div>
 <script src="src/app.js"></script>

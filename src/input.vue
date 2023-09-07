@@ -1,6 +1,10 @@
 <template>
     <div class="wrapper" :class="{error}">
-        <input :value="value" :disabled="disabled" :readonly="readonly" type="text"
+        <input :value="value"
+               :disabled="disabled"
+               :readonly="readonly"
+               :placeholder="placeholder"
+               type="text"
                @change="$emit('change',$event.target.value)"
                @focus="$emit('focus',$event.target.value)"
                @blur="$emit('blur',$event.target.value)"
@@ -20,6 +24,9 @@
         components: {Icon},
         props:{
             value:{
+                type:String
+            },
+            placeholder:{
                 type:String
             },
             disabled:{
@@ -45,15 +52,20 @@
     $font-size:12px;
     $box-shadow-color:rgba(0,0,0,0.5);
     $red:#F1453D;
+    $padding:10px;
     .wrapper{
+        width: 100%;
         font-size: $font-size;
         display: inline-flex;
         align-items: center;
-        >*:not(:last-child){
+        flex-wrap: wrap;
+        padding:$padding 0 ;
+        >*:not(:last-child and :first-child){
             margin-right: .5em;
         }
         >input{
             height: $height;
+            width: 100%;
             border:1px solid $border-color;
             border-radius: $border-radius;
             padding: 0 8px;
@@ -62,18 +74,29 @@
                 border-color:$border-color-hover ;
             }
             &:focus{
-                box-shadow:inset 0 1px 3px $box-shadow-color;
+                box-shadow:inset 0 .2px 2px $box-shadow-color;
                 outline: none;
             }
             &[disabled],&[readonly]{
-                border-color: #bbb;
+                border-color: #ccc;
                 color: #bbb;
+                background-color: #eee;
                 cursor: not-allowed;
+            }
+            &::placeholder{
+                color: #c9c5c5;
             }
         }
         &.error{
             >input{
                 border-color: $red;
+                &:hover{
+                    border-color:$red;
+                }
+                &:focus{
+                    box-shadow:inset 0 .2px 2px $red;
+                    outline: none;
+                }
             }
             .icon-error{
                 fill: $red;
