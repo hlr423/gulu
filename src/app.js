@@ -11,19 +11,22 @@ import Button from "./button.vue"
 import ButtonGroup from "./button-group.vue"
 import Icon from "./icon.vue"
 import Input from "./Input.vue"
+import Video from "./video.vue"
 import chai from 'chai'
 import spies from 'chai-spies'
 Vue.component('h-button',Button)
 Vue.component('h-button-group',ButtonGroup)
 Vue.component('h-icon',Icon)
 Vue.component('h-input',Input)
+Vue.component('h-video',Video)
 // import './svg'
 chai.use(spies)
 new Vue({
     el: "#app",
     data:{
         loading1:false,
-        message:''
+        message:'',
+        isPlayer:true
     },
     created(){
         setTimeout( ()=> {
@@ -35,6 +38,10 @@ new Vue({
     methods:{
         inputChange(e){
             console.log(e)
+        },
+        closeVideo(){
+            console.log('----')
+            this.isPlayer=false
         }
     }
 })

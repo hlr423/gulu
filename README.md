@@ -4,14 +4,11 @@
 
 
 ![button logo](src/assate/WechatIMG19193.png)
- 
 ![button logo](src/assate/WechatIMG19194.png)
- 
 ![button logo](src/assate/WechatIMG19195.png)
 
 ![button logo](src/assate/button.png)
-
-![button logo](src/assate/input.png)
+![input logo](src/assate/input.png)
 
  
 ## 介绍
@@ -79,6 +76,7 @@ components:{
   <script type="module" src="//at.alicdn.com/t/c/font_3866991_h3mwe0iest.js"></script>
 ```
 ## 文档
+目前支持 h-button,h-input,h-icon,h-video 组件
 ## 提问
 ## 变更记录
 ## 联系方式
