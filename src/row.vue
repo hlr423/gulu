@@ -7,32 +7,33 @@
 <script>
     export default {
         name: "h-row",
-        props:{
-            gutter:{
-                type:[Number,String]
+        props: {
+            gutter: {
+                type: [Number, String]
             }
         },
-        computed:{
-            rowStyle(){
-                return{
-                    marginLeft:this.gutter && -this.gutter/2+'px',
-                    marginRight:this.gutter && -this.gutter/2+'px'
+        computed: {
+            rowStyle() {
+                let {gutter} = this
+                return {
+                    marginLeft: -gutter / 2 + 'px',
+                    marginRight: -gutter / 2 + 'px'
                 }
             }
         },
         mounted() {
-            this.$children.forEach(vm=>{
-                vm.gutter=this.gutter
+            this.$children.forEach(vm => {
+                vm.gutter = this.gutter
             })
         }
     }
-//
+    //
 </script>
 
 <style scoped lang="scss">
-.row{
-    display: flex;
-    /*background-color: #bbbbbb;*/
-    overflow: hidden;
-}
+    .row {
+        display: flex;
+        /*background-color: #bbbbbb;*/
+        overflow: hidden;
+    }
 </style>
