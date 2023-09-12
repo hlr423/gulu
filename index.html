@@ -52,10 +52,30 @@
 <body>
 <div id="app">
     <div>
+        <h-row>
+            <h-col></h-col>
+            <h-col></h-col>
+            <h-col></h-col>
+        </h-row>
+        <h-row>
+            <h-col></h-col>
+            <h-col></h-col>
+            <h-col></h-col>
+            <h-col></h-col>
+            <h-col></h-col>
+        </h-row>
+        <h-row>
+            <h-col span="2"></h-col>
+            <h-col></h-col>
+            <h-col></h-col>
+            <h-col span="2"></h-col>
+        </h-row>
+    </div>
+    <div v-if=false>
         <P>{{isPlayer}}</P>
 <!--        <h-video :is-player="isPlayer" @close="closeVideo"></h-video>-->
     </div>
-    <div class="margin" style="width: 50%;">
+    <div class="margin" style="width: 50%;" v-if=false>
         <h-input value="职能" disabled class="margin"></h-input>
         <h-input value="" readonly class="margin" placeholder="姓名"></h-input>
         <h-input value="" @change="inputChange" placeholder="性别" class="margin"></h-input>
@@ -66,14 +86,14 @@
         </div>
     </div>
     <!--    按钮-->
-    <div class="margin">
+    <div class="margin" v-if=false>
         <h-button circle icon="sousuo" info grad></h-button>
         <h-button icon-position="right" info grad>info</h-button>
         <h-button :loading="loading1" @click="loading1=!loading1" success grad>success</h-button>
         <h-button icon-position="right" error grad>error</h-button>
         <h-button icon-position="right" warning grad>warning</h-button>
     </div>
-    <div class="margin">
+    <div class="margin" v-if=false>
         <h-button circle icon="sousuo" info></h-button>
         <h-button icon-position="right" error>error</h-button>
         <h-button icon="" success>success</h-button>
@@ -81,7 +101,7 @@
         <h-button icon="" warning>warning</h-button>
     </div>
     <!--    按钮组-->
-    <div class="margin">
+    <div class="margin" v-if=false>
         <h-button-group>
             <h-button icon="zuo" info grad>上一页</h-button>
             <h-button icon="you" icon-position="right" info grad>下一页</h-button>
@@ -99,7 +119,7 @@
             <h-button icon="you" icon-position="right" success grad>下一页</h-button>
         </h-button-group>
     </div>
-    <div class="margin">
+    <div class="margin" v-if=false>
         <h-button-group>
             <h-button icon="zuo" error>上一页</h-button>
             <h-button icon="you" icon-position="right" error>下一页</h-button>
@@ -118,7 +138,7 @@
         </h-button-group>
     </div>
     <!--    按钮线框-->
-    <div class="margin">
+    <div class="margin" v-if=false>
         <h-button circle icon="sousuo"></h-button>
         <h-button-group>
             <h-button icon="zuo">上一页</h-button>

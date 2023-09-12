@@ -1,6 +1,6 @@
 {
   "name": "hg-view",
-  "version": "0.0.6-1",
+  "version": "0.0.6-2",
   "description": "这是一个关于vue的iu框架",
   "main": "dist/index.js",
   "scripts": {
@@ -43,7 +43,7 @@
     "less": "^4.1.3",
     "mocha": "^10.2.0",
     "parcel-bundler": "^1.12.5",
-    "sass": "^1.66.1",
+    "sass": "^1.32.12",
     "sinon": "^15.2.0",
     "sinon-chai": "^3.7.0",
     "vue-template-compiler": "^2.5.16"

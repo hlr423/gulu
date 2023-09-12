@@ -12,6 +12,8 @@ import ButtonGroup from "./button-group.vue"
 import Icon from "./icon.vue"
 import Input from "./Input.vue"
 import Video from "./video.vue"
+import Row from "./row.vue"
+import Col from "./col.vue"
 import chai from 'chai'
 import spies from 'chai-spies'
 Vue.component('h-button',Button)
@@ -19,6 +21,8 @@ Vue.component('h-button-group',ButtonGroup)
 Vue.component('h-icon',Icon)
 Vue.component('h-input',Input)
 Vue.component('h-video',Video)
+Vue.component('h-row',Row)
+Vue.component('h-col',Col)
 // import './svg'
 chai.use(spies)
 new Vue({
