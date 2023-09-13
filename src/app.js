@@ -43,8 +43,8 @@ new Vue({
         inputChange(e){
             console.log(e)
         },
-        closeVideo(){
-            console.log('----')
+        closeVideo(e){
+            console.log('----',e)
             this.isPlayer=false
         }
     }

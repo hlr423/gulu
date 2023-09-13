@@ -7,7 +7,7 @@
 -->
 
 <template>
-    <svg class="h-icon" v-if="name">
+    <svg class="h-icon" v-if="name" @click="$emit('click')">
         <use :xlink:href="`#h-${name}`"></use>
     </svg>
 </template>
