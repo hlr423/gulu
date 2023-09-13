@@ -74,7 +74,7 @@ components:{
   <script type="module" src="//at.alicdn.com/t/c/font_3866991_h3mwe0iest.js"></script>
 ```
 ## 文档
-目前支持 h-button,h-input,h-icon 组件
+目前支持 button,input,icon,video,row,col栅格布局 组件
 ## 提问
 ## 变更记录
 ## 联系方式

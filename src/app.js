@@ -30,7 +30,7 @@ new Vue({
     data:{
         loading1:false,
         message:'',
-        isPlayer:true
+        isPlayer:false
     },
     created(){
         setTimeout( ()=> {

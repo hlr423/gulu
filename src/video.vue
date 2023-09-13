@@ -7,7 +7,7 @@
                playsinline
                :loop="loop"
                :poster="poster"
-               autoplay="autoplay"></video>
+               :autoplay="autoplay"></video>
     </div>
 </template>
 
